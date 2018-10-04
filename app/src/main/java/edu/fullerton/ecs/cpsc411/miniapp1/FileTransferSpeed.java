@@ -40,7 +40,7 @@ public class FileTransferSpeed extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
                 transferTime = calcTransferSpeed();
-                // souece http://www.java67.com/2014/06/how-to-format-float-or-double-number-java-example.html
+                // source http://www.java67.com/2014/06/how-to-format-float-or-double-number-java-example.html
                 DecimalFormat oneDecPlace = new DecimalFormat("#.#");
                 String formatted = oneDecPlace.format(transferTime);
                 transferTimeView.setText(formatted);
@@ -76,8 +76,7 @@ public class FileTransferSpeed extends AppCompatActivity {
         String sizeString = String.valueOf(sizeEdit.getText());
         String speedString = String.valueOf(speedEdit.getText());
 
-        if ((speedString.trim().length() <= 0) || (sizeString.trim().length() <= 0) ||
-                (speedString.equals(".")) || sizeString.equals(".")) {
+        if ((speedString.trim().length() <= 0) || (sizeString.trim().length() <= 0)) {
             return 0.0;
         }
         else {

@@ -9,8 +9,8 @@
     <TextView
         android:id="@+id/fileSizeLabel"
         android:layout_width="wrap_content"
-        android:layout_height="21dp"
-        android:layout_marginStart="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="@string/file_size"
         app:layout_constraintBaseline_toBaselineOf="@+id/fileValue"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,12 +38,13 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="@string/size_hint"
-        android:inputType="numberDecimal"
+        android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/speedValue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/fileSizeLabel"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/speedValue"
@@ -53,17 +54,18 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="@string/speed_hint"
-        android:inputType="numberDecimal"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/fileValue"
-        app:layout_constraintTop_toBottomOf="@+id/fileValue" />
+        app:layout_constraintTop_toBottomOf="@+id/fileValue"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/speedLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="32dp"
         android:text="@string/speed_label"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
